@@ -110,8 +110,9 @@
 
       <form method="post" action="" name="newsletter-form" id="newsletter">
         <input type="email" placeholder="Enter your email" name="Gmail" />
-        <button type="submit" id="sumbit">Subscribe</button>
+        <button type="submit" id="sumbit" >Subscribe</button>
       </form>
+      
     </div>
 
     <footer>
@@ -124,16 +125,9 @@
           </p>
         </div>
         <div class="footer-div">
-          <h3>Contact Info</h3>
-          <p style="width: 254px; color: white">
-            <b>Address:</b>Karangamal Near jaggarnath Temple<br /><b>Phone:</b
-            >+917894721848<br /><b>Gmail:</b>info@gmail.com
-          </p>
-        </div>
-        <div class="footer-div">
           <h3>Important Link</h3>
           <ul>
-            <a href="#">
+            <a href="/index.html">
               <li>Home</li>
             </a>
             <a href="/Pages/ourstory.html">
@@ -147,23 +141,15 @@
             </a>
           </ul>
         </div>
-        <div class="footer-div button">
-          <h3>Newsletter</h3>
-          <form
-            id="newsletter-form"
-            action="https://script.google.com/a/macros/byecom.in/s/AKfycbydaYyp_WLnYa67VrIeuf8Rfu1KURx3s-iNAjvoL8EVPiTpUEwdkg--wuXStoi0EPBx/exec"
-            method="post"
-          >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="itanexample@gmail.com"
-              required
-            /><br />
-            <input type="submit" value="Submit" />
-          </form>
+        <div class="footer-div">
+          <h3>Contact Info</h3>
+          <p style="width: 254px; color: white">
+            <b>Address:</b>Karangamal Near jaggarnath Temple<br /><b>Phone:</b
+            >+917894721848<br /><b>Gmail:</b>info@gmail.com
+          </p>
         </div>
+        
+        
       </div>
       <div class="copyright"></div>
       <div class="copyright-left">
@@ -203,6 +189,14 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+
+      function displayText() {
+      var text = document.getElementById("text");
+      text.style.display = "block";
+      setTimeout(function() {
+        text.style.display = "none";
+      }, 3000); // 3000 milliseconds = 3 seconds
+    }
     </script>
     <style>
       /* import font implementation */
@@ -210,7 +204,8 @@
 
       /* import font awsome implementation */
       @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-
+      
+      
       /* Declear color theme */
       :root {
         --primary-color: rgba(255, 102, 0, 0.959);
@@ -446,30 +441,6 @@
         justify-content: space-between;
       }
 
-      [type="submit"] {
-        width: auto;
-        background: white;
-        border-style: none;
-        margin-top: 5px;
-        transition: 0.2s;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-
-      [type="email"] {
-        width: 211px;
-        background: white;
-        border-style: none;
-        margin-top: 5px;
-        transition: 0.2s;
-        font-size: 16px;
-        outline: 0;
-      }
-
-      [type="submit"]:hover {
-        background: var(--primary-color);
-        color: white;
-      }
 
       .footer-center .footer-div {
         text-align: left;
@@ -582,6 +553,31 @@
       .member-info p {
         font-size: 18px;
         margin-top: 5px;
+        color: white;
+      }
+      /* Subscription div */
+      [type="submit"] {
+        width: auto;
+        background: white;
+        border-style: none;
+        margin-top: 5px;
+        transition: 0.2s;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      [type="email"] {
+        width: 211px;
+        background: white;
+        border-style: none;
+        margin-top: 5px;
+        transition: 0.2s;
+        font-size: 16px;
+        outline: 0;
+      }
+
+      [type="submit"]:hover {
+        background: var(--primary-color);
         color: white;
       }
       /* Our story view */
